@@ -1,15 +1,17 @@
 <div class='container'>
-  <div class='window'>
-    <div class='overlay'></div>
-    <div class='content'>
-      <div class='welcome'>Hello There!</div>
-      <div class='subtitle'>Welcome to our exclusive site. Login to book some sexy time and much more. </div>
-      <div class='input-fields'>
-        <input type='text' placeholder='Username' class='input-line full-width' [(ngModel)]="email">
-        <input type='password' placeholder='Password' class='input-line full-width' [(ngModel)]="password">
-      </div>
-      <div><button type="submit" class='ghost-round full-width' (click)="login()">Sign in</button></div>
-      <p *ngIf="message">{{ message }}</p>
+  <div class='content'>
+    <div class='welcome'>Hello There!</div>
+    <div class='subtitle'>Welcome to our exclusive site. Login to book some sexy time and much more. </div>
+    <div class='input-fields'>
+      <input type='text' placeholder='Username' class='input-line full-width' [(ngModel)]="email">
+      <input type='password' placeholder='Password' class='input-line full-width' [(ngModel)]="password">
     </div>
+    <div><button type="submit" class='ghost-round full-width' (click)="login()">Sign in</button></div>
+  <div id="popup1" class="modal" [ngClass]="{ 'show-popup': isStyled }">
+      <div class="popup">
+          <h2>Oops! Wrong username or password</h2>
+          <img src="../../assets/img/disappointed.png">
+      </div>
   </div>
+  </div>    
 </div>

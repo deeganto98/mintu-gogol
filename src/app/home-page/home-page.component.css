@@ -6,7 +6,7 @@
     margin: 0 auto;
     margin-bottom: 180px;
     position: relative;
-    top: 10px;
+    top: 130px;
   } 
   @media (max-width:1200px){
   .icons{
@@ -39,31 +39,9 @@
   }
   .grow img{
     height: 50px;
+    margin: 0 auto;
   }
-  .grow:hover .icon-title{
-    transform:translateY(-18px);
-    transition: transform .8s ease, top .8s ease;
-  }
-  .grow:hover img{
-    transform:translateY(-18px);
-    transition: transform .8s ease, top .8s ease;
-  } 
   .grow{ 
     border: 1px solid #ebe9e8;
     background-color: transparent;
-  }
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  .fadeIn{
-      visibility:hidden;
-  }
-  .icons div:hover .fadeIn {
-    visibility:visible;
-    animation-name: fadeIn;
   }

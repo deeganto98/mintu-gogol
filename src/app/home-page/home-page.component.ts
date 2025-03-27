@@ -19,7 +19,12 @@ export class UserHomeComponent {
   async loadUser() {
     const user = await this.authService.getCurrentUser();
     if (user) {
-      this.userEmail = user.email ?? ''; 
+      if(user.email == 'delhideganto@gmail.com'){
+        this.Name = 'Gogol';
+      }
+      else if(user.email == 'dgtaniya30@gmail.com'){
+        this.Name = 'Mintu';
+      } 
     }
   }
 
