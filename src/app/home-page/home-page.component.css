@@ -1,0 +1,69 @@
+.icons{
+    display:grid;
+    text-align:center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 180px;
+    position: relative;
+    top: 10px;
+  } 
+  @media (max-width:1200px){
+  .icons{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  }
+  @media (max-width:950px){
+  .icons{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  }
+  @media (max-width:650px){
+    .icons{
+      grid-template-columns: 1fr 1fr;
+    }
+    }
+  @media (max-width:500px){
+  .icons{
+    grid-template-columns: 1fr;
+  }
+  } 
+  
+  .icon-title{
+    font-family: 'Libre Baskerville', serif;
+    font: weight 100;
+    font-size:20px
+  }
+  .grow:hover{
+  background-color:#d3d3d3;
+  }
+  .grow img{
+    height: 50px;
+  }
+  .grow:hover .icon-title{
+    transform:translateY(-18px);
+    transition: transform .8s ease, top .8s ease;
+  }
+  .grow:hover img{
+    transform:translateY(-18px);
+    transition: transform .8s ease, top .8s ease;
+  } 
+  .grow{ 
+    border: 1px solid #ebe9e8;
+    background-color: transparent;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .fadeIn{
+      visibility:hidden;
+  }
+  .icons div:hover .fadeIn {
+    visibility:visible;
+    animation-name: fadeIn;
+  }
