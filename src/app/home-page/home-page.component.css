@@ -1,47 +1,20 @@
-.icons{
-    display:grid;
-    text-align:center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 180px;
-    position: relative;
-    top: 130px;
-  } 
-  @media (max-width:1200px){
-  .icons{
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  }
-  @media (max-width:950px){
-  .icons{
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  }
-  @media (max-width:650px){
-    .icons{
-      grid-template-columns: 1fr 1fr;
-    }
-    }
-  @media (max-width:500px){
-  .icons{
-    grid-template-columns: 1fr;
-  }
-  } 
-  
-  .icon-title{
-    font-family: 'Libre Baskerville', serif;
-    font: weight 100;
-    font-size:20px
-  }
-  .grow:hover{
-  background-color:#d3d3d3;
-  }
-  .grow img{
-    height: 50px;
-    margin: 0 auto;
-  }
-  .grow{ 
-    border: 1px solid #ebe9e8;
-    background-color: transparent;
-  }
+input[type="date"]{
+  background-color: #e9f5db;
+  padding: 15px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  font-family: "Roboto Mono",monospace;
+  color: #87986a;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+::-webkit-calendar-picker-indicator{
+  background-color: #87986a;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}

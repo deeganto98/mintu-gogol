@@ -1,17 +1,15 @@
-<div class="icons" id="icons" align="center">
-    <div class="grow">
-      <p class="icon-title">Schedule an Appointment</p> 
-      <img src="../../assets/img/calendar.png">
-      <p class="animated fadeIn">Schedule a meeting with your {{Name}}</p>
-    </div> 
-    <div class="grow">
-      <p class="icon-title">Send a Feedback</p> 
-      <img src="../../assets/img/feedback.png">
-      <p class="animated fadeIn">Provide a feedback over any of our conversation or just drop a random appreciation email</p>
-    </div>
-    <div class="grow">
-      <p class="icon-title">Attention Requirement</p> 
-      <img src="../../assets/img/attention.png">
-      <p class="animated fadeIn">Need love, cuddles, or extra attention? Just let me know</p>
-    </div> 
-</div>
+<div class="card">
+    <p id="title">Book Apointment</p>
+    <form [formGroup]="appointmentForm" (ngSubmit)="scheduleMeeting()">
+      <div class="form-group">
+        <label for="appointmentTime">Meeting Time </label>
+        <input type="date" id="appointmentTime" formControlName="appointmentTime"/>
+      </div>
+      <div class="form-group">
+        <label for="email">Email </label>
+        <input type="email" id="email" class="form-control" formControlName="email"/>
+      </div>
+      <br/>
+      <button type="submit" id="schedule-button">Schedule Appointment</button>
+    </form>
+  </div>

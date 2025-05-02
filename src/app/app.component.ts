@@ -14,7 +14,7 @@ export class AppComponent {
   ngOnInit() {
     this.authService.getAuthState().subscribe((isLoggedIn) => {
       if (!isLoggedIn) {
-        this.router.navigate(['/login']); 
+        this.router.navigate(['/landing']); 
       }
     });
   }

@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { CommonModule } from '@angular/common';
-import { UserHomeComponent } from './home-page/home-page.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -12,7 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
   declarations: [
     AppComponent,
     LoginPageComponent,
-    UserHomeComponent
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
