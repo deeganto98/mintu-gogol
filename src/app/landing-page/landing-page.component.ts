@@ -12,27 +12,8 @@ export class LandingPageComponent {
 openLogin() {
   this.router.navigate(['/login']); 
 }
-  userEmail: string = '';
-  Name: any;
 
-  constructor(private authService: AuthService, private router: Router) {
-    this.loadUser();
+  constructor(private router: Router) {
   }
 
-  async loadUser() {
-    const user = await this.authService.getCurrentUser();
-    if (user) {
-      if(user.email == 'delhideganto@gmail.com'){
-        this.Name = 'Gogol';
-      }
-      else if(user.email == 'dgtaniya30@gmail.com'){
-        this.Name = 'Mintu';
-      } 
-    }
-  }
-
-  async logout() {
-    await this.authService.logout();
-    this.router.navigate(['/login']);
-  }
 }

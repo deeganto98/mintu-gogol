@@ -18,6 +18,7 @@ export class AuthService {
   async getCurrentUser() {
     const { data, error } = await this.supabase.auth.getUser();
     if (error) throw error;
+    console.log(data.user)
     return data.user; 
   }
 
@@ -34,6 +35,6 @@ export class AuthService {
 
   async logout() {
     await this.supabase.auth.signOut();
-    this.authState.next(false);  // ✅ Set auth state to false
+    this.authState.next(false);
   }
 }

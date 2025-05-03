@@ -6,13 +6,13 @@
 <div class="content">
   <div class="login-box">
     <h2>LOG IN FOR SOME LOVE REQUESTS!</h2>
-    <label for="username">Username</label>
-    <input type="text" id="username" placeholder="">
+    <label for="username" >Username</label>
+    <input type="text" [(ngModel)] = "username"  id="username" placeholder="">
 
     <label for="password">Password</label>
-    <input type="password" id="password" placeholder="">
+    <input type="password" [(ngModel)] = "password" id="password" placeholder="">
 
-    <button class="login-btn">
+    <button class="login-btn" (click)="login()">
       <img src="assets/img/login-btn-heart.webp" alt="Heart" class="btn-icon" />
       Next
     </button>

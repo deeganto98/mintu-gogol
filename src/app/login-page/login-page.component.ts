@@ -10,25 +10,19 @@ import { Router } from '@angular/router';
   standalone:false
 })
 export class LoginPageComponent {
-  message = '';
-  email= '';
+
+  username= '';
   password = '';
-  isStyled = false;
-Name: any;
+
   constructor(private authService: AuthService,private router: Router) {}
   async login() {
     try {
-      const user = await this.authService.login(this.email, this.password);
-      this.router.navigate(['/home']); 
+      const user = await this.authService.login(this.username, this.password);
+      console.log("USER "+user); 
+      this.router.navigate(['/home']);
     } catch (error: any) {
-      this.isStyled = !this.isStyled; 
-      setTimeout(() => { 
-        this.closeModal();
-      }, 2000);
+      console.log("ERROR "+error); 
     }
   }
 
-  closeModal() {
-    this.isStyled = false; 
-  }
 }
